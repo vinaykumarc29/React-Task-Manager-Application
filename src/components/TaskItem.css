@@ -1,0 +1,115 @@
+.task-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.task-info h3 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.task-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.priority,
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.high {
+  background: #ffe5e5;
+  color: #d32f2f;
+}
+
+.medium {
+  background: #fff4d6;
+  color: #d68910;
+}
+
+.low {
+  background: #dff8e7;
+  color: #1b8f4b;
+}
+
+.pending {
+  background: #ececec;
+  color: #555;
+}
+
+.completed {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.task-info p {
+  color: #777;
+  font-size: 14px;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu-btn {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.menu-btn:hover {
+  background: #f2f2f2;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  width: 220px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  border: none;
+  background: white;
+  padding: 12px 16px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-menu button:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-menu hr {
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.delete {
+  color: #dc2626;
+}

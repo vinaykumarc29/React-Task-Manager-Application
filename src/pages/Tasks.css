@@ -1,0 +1,127 @@
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Heading */
+
+.heading-container {
+    margin-bottom: 30px;
+}
+
+.heading-container h1 {
+    font-size: 2.2rem;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.heading-container p {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* Filter Section */
+
+.filter-conatiner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+#search-bar {
+    flex: 1;
+    height: 50px;
+    padding: 0 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#search-bar:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+#task-status {
+    width: 180px;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-conatiner a {
+    text-decoration: none;
+}
+
+.filter-conatiner button {
+    height: 50px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-conatiner button:hover {
+    background: #4338ca;
+}
+
+/* Task List Layout Only */
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .heading-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .filter-conatiner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    #search-bar,
+    #task-status,
+    .filter-conatiner button {
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    #search-bar {
+        padding: 0 15px;
+    }
+
+    #task-status {
+        padding: 0 12px;
+    }
+
+    .filter-conatiner button {
+        padding: 0;
+    }
+}
