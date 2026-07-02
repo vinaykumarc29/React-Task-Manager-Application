@@ -5,6 +5,9 @@
 Task Manager Dashboard is a modern and responsive React application that helps users organize, manage, and track their daily tasks efficiently. The application provides authentication, task management, search, filtering, dynamic dashboard statistics, and persistent cloud storage using Supabase.
 
 
+🚀 **Deployed Application Link:**  
+https://taskmanager-nmc7.onrender.com
+
 ---
 
 # Features
