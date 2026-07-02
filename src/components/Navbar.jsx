@@ -1,8 +1,11 @@
 import React from 'react';
 import './Navbar.css';
 import { Link, NavLink } from 'react-router';
+import { useAuth } from '../hooks/useAuth';
 
 function Navbar() {
+
+  const {user , login ,logout } = useAuth();
   return (
    <nav className="navbar">
   <div className="navbar-left">
@@ -20,7 +23,7 @@ function Navbar() {
 </NavLink>  </div>
 
   <div className="navbar-right">
-    <button className="logout-btn">
+    <button className="logout-btn" onClick={logout}>
       Logout
     </button>
   </div>

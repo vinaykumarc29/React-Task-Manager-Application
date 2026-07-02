@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-/* ===========================
-   Main Container
-=========================== */
 
 .dashboard-container {
     max-width: 1200px;
@@ -14,9 +11,6 @@
     padding: 0 20px;
 }
 
-/* ===========================
-   Heading
-=========================== */
 
 .dashboard-container h1 {
     font-size: 2.2rem;
@@ -30,9 +24,6 @@
     margin-bottom: 35px;
 }
 
-/* ===========================
-   Stats Section
-=========================== */
 
 a{
     text-decoration: none;
@@ -86,9 +77,6 @@ a{
     background: linear-gradient(135deg, #fff7ed, #fffbeb);
 }
 
-/* ===========================
-   Recent Tasks
-=========================== */
 
 .recent-tasks-container {
     background: #ffffff;
@@ -126,9 +114,6 @@ a{
     transform: translateX(5px);
 }
 
-/* ===========================
-   Responsive
-=========================== */
 
 @media (max-width: 900px) {
 
@@ -141,27 +126,3 @@ a{
     }
 }
 
-@media (max-width: 600px) {
-
-    .dashboard-container {
-        padding: 0 15px;
-        margin: 25px auto;
-    }
-
-    .dashboard-container h1 {
-        font-size: 1.8rem;
-    }
-
-    .dashboard-subtitle {
-        font-size: 0.95rem;
-        margin-bottom: 25px;
-    }
-
-    .recent-tasks-container {
-        padding: 18px;
-    }
-
-    .stats-card h2 {
-        font-size: 2rem;
-    }
-}

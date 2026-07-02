@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar';
 import { useTask } from '../hooks/useTask';
+import {useAuth} from '../hooks/useAuth';
 import { useNavigate } from 'react-router';
 import './TaskForm.css';
 
@@ -8,6 +9,9 @@ function TaskForm() {
 
   const {sortedTaskList , addTask , removeTask} = useTask();
   const navigate = useNavigate();
+
+  const {user} = useAuth();
+
 
 
   let [title ,setTitle] = useState('');
@@ -17,7 +21,7 @@ function TaskForm() {
   let [errorMsg,setErrorMsg] = useState('');
 
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = async(e)=>{
     e.preventDefault();
     console.log(`form submitted`);
 
@@ -40,20 +44,22 @@ function TaskForm() {
 
 
     let task = {
-      id: Math.floor(Math.random()*6000),
-      title:title.trim(),
-      priority:priority,
-      status:status
+        title:title.trim(),
+        priority:priority,
+        status:status,
+        user_id:user.id
     }
 
-    addTask(task);
-
-    setTitle(``);
-    setPriority(``);
-    setStatus(``);
-    setErrorMsg(``);
-
-    navigate('/tasks');
+    try{
+        await addTask(task);    
+        setTitle(``);
+        setPriority(``);
+        setStatus(``);
+        setErrorMsg(``);    
+        navigate('/tasks');
+    }catch(error){
+        setErrorMsg(error.message);
+    }
   }
 
   return (
