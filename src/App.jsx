@@ -10,6 +10,7 @@ import TaskProvider from './context/TaskProvider';
 import AuthProvider from './context/AuthProvider';
 import Register from './pages/Register';
 import ProtectedRoute from './pages/ProtectedRoute';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
               <Route path='/' element={<ProtectedRoute> <Dashboard /> </ProtectedRoute> } />
               <Route path='/tasks' element={<ProtectedRoute> <Tasks /> </ProtectedRoute> } />
               <Route path='/addtask' element={<ProtectedRoute> <TaskForm /> </ProtectedRoute> } />
+
+              <Route path='*' element={<PageNotFound/>} />
 
             </Routes>
 
